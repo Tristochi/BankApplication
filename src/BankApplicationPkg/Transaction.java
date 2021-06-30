@@ -12,5 +12,69 @@
 package BankApplicationPkg;
 
 public class Transaction {
-
+	private int transNum;
+	private float custNbr;
+	private float acctNbr;
+	private char transactionType;
+	private String transactionDate;
+	private float transactionAmt;
+	
+	public Transaction() {
+		transNum = 0;
+		custNbr = 0f;
+		acctNbr = 0f;
+		transactionType = '*';
+		transactionDate = "01/01/1900";
+		transactionAmt = 0.00f; 
+	}
+	
+	public void setTransNum(int transNum) {
+		this.transNum = transNum;
+	}
+	
+	public void setCustNbr(float custNbr) {
+		this.custNbr = custNbr;
+	}
+	
+	public void setAcctNbr(float acctNbr) {
+		this.acctNbr = acctNbr;
+	}
+	
+	public void setTransType(char transactionType) {
+		this.transactionType = transactionType;
+	}
+	
+	public void setTransDate(String transactionDate) {
+		this.transactionDate = transactionDate;
+	}
+	
+	public void setTransAmt(float transactionAmt) {
+		this.transactionAmt = transactionAmt;
+	}
+	
+	public int getTransNum() {
+		return transNum;
+	}
+	
+	public float getCustNbr() {
+		return custNbr;
+	}
+	
+	public float getAcctNbr() {
+		return acctNbr;
+	}
+	
+	public char getTransType() {
+		return transactionType;
+	}
+	
+	public String getTransDate() {
+		return transactionDate;
+	}
+	
+	public float getTransAmt() {
+		return transactionAmt;
+	}
+	
 }
+
