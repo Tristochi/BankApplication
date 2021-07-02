@@ -7,9 +7,12 @@
 							- B = Balance
 	Transaction Date - Date - Sys Date/Timestamp
 	Transaction Amount - Float - Actual Amount ($0 for Checking Bal)
+	
+
 */
 
 package BankApplicationPkg;
+
 
 public class Transaction {
 	private int transNum;
@@ -19,6 +22,8 @@ public class Transaction {
 	private String transactionDate;
 	private float transactionAmt;
 	
+	Account custAcct;
+	
 	public Transaction() {
 		transNum = 0;
 		custNbr = 0f;
@@ -26,6 +31,15 @@ public class Transaction {
 		transactionType = '*';
 		transactionDate = "01/01/1900";
 		transactionAmt = 0.00f; 
+	}
+	
+	public Transaction(int transNum, float custNbr, float acctNbr, char transactionType, String transactionDate, float transactionAmt) {
+		this.transNum = transNum;
+		this.custNbr = custNbr;
+		this.acctNbr = acctNbr;
+		this.transactionType = transactionType;
+		this.transactionDate = transactionDate;
+		this.transactionAmt = transactionAmt;
 	}
 	
 	public void setTransNum(int transNum) {
